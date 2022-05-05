@@ -1,0 +1,68 @@
+
+const getCalcContainer = () => {
+
+  const container = document.querySelector('.container');
+
+  const calcContainer = document.createElement('section');
+  calcContainer.setAttribute('class', 'calcContainer');
+
+  const labelValor = document.createElement('label');
+  labelValor.setAttribute('class', 'labelCalc');
+  labelValor.setAttribute('for', 'inputValor');
+  labelValor.textContent = 'Aporte inicial R$ ';
+
+  const inputValor = document.createElement('input');
+  inputValor.setAttribute('class', 'inputCalc');
+  inputValor.setAttribute('id', 'inputValor');
+  inputValor.setAttribute('value', '0');
+  inputValor.setAttribute('type', 'tel');
+
+  const labelTempo = document.createElement('label');
+  labelTempo.setAttribute('class', 'labelCalc');
+  labelTempo.setAttribute('for', 'inputTempo');
+  labelTempo.textContent = 'Tempo:  ';
+
+  const inputTempo = document.createElement('input');
+  inputTempo.setAttribute('class', 'inputCalc');
+  inputTempo.setAttribute('id', 'inputTempo');
+  inputTempo.setAttribute('value', '0');
+  inputTempo.setAttribute('type', 'number');
+
+  const labelTaxa = document.createElement('label');
+  labelTaxa.setAttribute('class', 'labelTaxa');
+  labelTaxa.setAttribute('for', 'inputTaxa');
+  labelTaxa.textContent = 'Taxa:  ';
+
+  const inputTaxa = document.createElement('input');
+  inputTaxa.setAttribute('class', 'inputCalc');
+  inputTaxa.setAttribute('id', 'inputTaxa');
+  inputTaxa.setAttribute('value', '0');
+  inputTaxa.setAttribute('type', 'number');
+
+  const calcBtn = document.createElement('button');
+  calcBtn.setAttribute('class', 'calcButton');
+  calcBtn.textContent = 'Calcular';
+
+  const resetBtn = document.createElement('button');
+  resetBtn.setAttribute('class', 'resetBtn');
+  resetBtn.textContent = 'Limpar';
+
+  //appends
+
+  calcContainer.appendChild(labelValor);
+  calcContainer.appendChild(inputValor);
+
+  calcContainer.appendChild(labelTempo);
+  calcContainer.appendChild(inputTempo);
+
+  calcContainer.appendChild(labelTaxa);
+  calcContainer.appendChild(inputTaxa);
+
+  calcContainer.appendChild(calcBtn);
+  calcContainer.appendChild(resetBtn);
+
+  container.appendChild(calcContainer);
+
+}
+
+export default getCalcContainer;
