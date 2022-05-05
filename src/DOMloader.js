@@ -8,4 +8,4 @@ const domLoader = (() => {
   getResultContainer();
 })();
 
-export default domLoader;
+export default domLoader; 
