@@ -1,12 +1,18 @@
 body * {
   border: .1px solid red;
 }
+:root {
+--smallPadding: .5rem;
+}
 body {
   margin: 0;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .calcContainer {
+  display:grid;
 }
 .resultContainer {
 }
+

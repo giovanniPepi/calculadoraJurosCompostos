@@ -1,7 +1,6 @@
+import body from "./getBody";
 
 const getCalcContainer = () => {
-
-  const container = document.querySelector('.container');
 
   const calcContainer = document.createElement('section');
   calcContainer.setAttribute('class', 'calcContainer');
@@ -61,8 +60,7 @@ const getCalcContainer = () => {
   calcContainer.appendChild(calcBtn);
   calcContainer.appendChild(resetBtn);
 
-  container.appendChild(calcContainer);
-
+  body.appendChild(calcContainer);
 }
 
 export default getCalcContainer;
