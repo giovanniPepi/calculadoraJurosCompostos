@@ -8,6 +8,7 @@ const getResultTable = () => {
     {ano: 4, valor: 4000},
     {ano: 5, valor: 5000},
     {ano: 6, valor: 6000},
+    {ano: 7, valor: 18378},
   ];
 
   // table creation
@@ -38,17 +39,14 @@ const getResultTable = () => {
       
       keys.forEach((key => {
         let cell = row.insertCell();
-        let text = document.createTextNode(text);
+        let text = document.createTextNode(element[key]);
         cell.appendChild(text);
       })) 
     }
   }
 
-  generateTableHead(table, data);
   generateTable(table, result1);
-
-
-
+  generateTableHead(table, data);
   
   //appends
 
