@@ -8,10 +8,11 @@ const getResultTable = () => {
     {ano: 4, valor: 4000},
     {ano: 5, valor: 5000},
     {ano: 6, valor: 6000},
-  ]
+  ];
 
   // table creation
   const table = document.createElement('table');
+  
   //return object property names, iterate only through first obj
   let data = Object.keys(result1[0]);
    
@@ -29,7 +30,24 @@ const getResultTable = () => {
     }
   }
 
+  //rows
+  const generateTable = (table, data) => {
+    for (let element of data) {
+      let row = table.insertRow();
+      let keys = Object.keys(element);
+      
+      keys.forEach((key => {
+        let cell = row.insertCell();
+        let text = document.createTextNode(text);
+        cell.appendChild(text);
+      })) 
+    }
+  }
+
   generateTableHead(table, data);
+  generateTable(table, result1);
+
+
 
   
   //appends
