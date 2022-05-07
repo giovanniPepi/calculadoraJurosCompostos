@@ -27,6 +27,18 @@ const getCalcContainer = () => {
   inputTempo.setAttribute('value', '0');
   inputTempo.setAttribute('type', 'number');
 
+  const selectionTempo  = document.createElement('select');
+  selectionTempo.setAttribute('class', 'selectionTempo');
+  selectionTempo.setAttribute('name', 'periodo');
+
+  const periodoTaxa1 = document.createElement('option');
+  periodoTaxa1.setAttribute('value', 'anual');
+  periodoTaxa1.textContent = 'Anual';
+
+  const periodoTaxa2 = document.createElement('option');
+  periodoTaxa2.setAttribute('value', 'mensal');
+  periodoTaxa2.textContent = 'Mensal';
+  
   const labelTaxa = document.createElement('label');
   labelTaxa.setAttribute('class', 'labelTaxa');
   labelTaxa.setAttribute('for', 'inputTaxa');
@@ -47,6 +59,8 @@ const getCalcContainer = () => {
   resetBtn.textContent = 'Limpar';
 
   //appends
+  selectionTempo.appendChild(periodoTaxa1);
+  selectionTempo.appendChild(periodoTaxa2);
 
   calcContainer.appendChild(labelValor);
   calcContainer.appendChild(inputValor);
@@ -56,6 +70,8 @@ const getCalcContainer = () => {
 
   calcContainer.appendChild(labelTaxa);
   calcContainer.appendChild(inputTaxa);
+
+  calcContainer.appendChild(selectionTempo);
 
   calcContainer.appendChild(calcBtn);
   calcContainer.appendChild(resetBtn);
