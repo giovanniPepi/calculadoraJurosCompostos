@@ -51,7 +51,7 @@ const getCalcContainer = () => {
   inputTaxa.setAttribute('type', 'number');
 
   const calcBtn = document.createElement('button');
-  calcBtn.setAttribute('class', 'calcButton');
+  calcBtn.setAttribute('class', 'calcBtn');
   calcBtn.textContent = 'Calcular';
 
   const resetBtn = document.createElement('button');
