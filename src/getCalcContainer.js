@@ -43,17 +43,17 @@ const getCalcContainer = () => {
   inputTempo.setAttribute('type', 'tel');
   inputTempo.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
-  const selectionTempo  = document.createElement('select');
-  selectionTempo.setAttribute('class', 'selectionTempo');
-  selectionTempo.setAttribute('name', 'periodo');
+  const selectionPeriodo  = document.createElement('select');
+  selectionPeriodo.setAttribute('class', 'selectionPeriodo');
+  selectionPeriodo.setAttribute('name', 'periodo');
 
-  const periodoTaxa1 = document.createElement('option');
-  periodoTaxa1.setAttribute('value', 'anual');
-  periodoTaxa1.textContent = 'Anual';
+  const periodo1 = document.createElement('option');
+  periodo1.setAttribute('value', 'anos');
+  periodo1.textContent = 'Anos';
 
-  const periodoTaxa2 = document.createElement('option');
-  periodoTaxa2.setAttribute('value', 'mensal');
-  periodoTaxa2.textContent = 'Mensal';
+  const periodo2 = document.createElement('option');
+  periodo2.setAttribute('value', 'meses');
+  periodo2.textContent = 'Mesesl';
   
   const labelTaxa = document.createElement('label');
   labelTaxa.setAttribute('class', 'labelTaxa');
@@ -67,6 +67,18 @@ const getCalcContainer = () => {
   inputTaxa.setAttribute('type', 'tel');
   inputTaxa.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
+  const selectionTempo  = document.createElement('select');
+  selectionTempo.setAttribute('class', 'selectionTempo');
+  selectionTempo.setAttribute('name', 'periodoTaxa');
+
+  const periodoTaxa1 = document.createElement('option');
+  periodoTaxa1.setAttribute('value', 'anual');
+  periodoTaxa1.textContent = 'Anual';
+
+  const periodoTaxa2 = document.createElement('option');
+  periodoTaxa2.setAttribute('value', 'mensal');
+  periodoTaxa2.textContent = 'Mensal';
+  
   const calcBtn = document.createElement('button');
   calcBtn.setAttribute('class', 'calcBtn');
   calcBtn.textContent = 'Calcular';
@@ -79,6 +91,9 @@ const getCalcContainer = () => {
   selectionTempo.appendChild(periodoTaxa1);
   selectionTempo.appendChild(periodoTaxa2);
 
+  selectionPeriodo.appendChild(periodo1);
+  selectionPeriodo.appendChild(periodo2);
+
   calcContainer.appendChild(labelPrincipal);
   calcContainer.appendChild(inputPrincipal);
 
@@ -87,6 +102,7 @@ const getCalcContainer = () => {
 
   calcContainer.appendChild(labelTempo);
   calcContainer.appendChild(inputTempo);
+  calcContainer.appendChild(selectionPeriodo);
 
   calcContainer.appendChild(labelTaxa);
   calcContainer.appendChild(inputTaxa);
