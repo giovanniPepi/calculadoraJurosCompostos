@@ -7,6 +7,7 @@ const getCalcContainer = () => {
 
   const labelPrincipal = document.createElement('label');
   labelPrincipal.setAttribute('class', 'labelCalc');
+  labelPrincipal.setAttribute('id', 'labelPrincipal');
   labelPrincipal.setAttribute('for', 'inputPrincipal');
   labelPrincipal.textContent = 'Valor Principal R$ ';
 
@@ -20,6 +21,7 @@ const getCalcContainer = () => {
 
   const labelValor = document.createElement('label');
   labelValor.setAttribute('class', 'labelCalc');
+  labelValor.setAttribute('id', 'labelValor');
   labelValor.setAttribute('for', 'inputValor');
   labelValor.textContent = 'Aporte R$ ';
 
@@ -33,6 +35,7 @@ const getCalcContainer = () => {
 
   const labelTempo = document.createElement('label');
   labelTempo.setAttribute('class', 'labelCalc');
+  labelTempo.setAttribute('id', 'labelTempo');
   labelTempo.setAttribute('for', 'inputTempo');
   labelTempo.textContent = 'Período  ';
 
@@ -40,7 +43,7 @@ const getCalcContainer = () => {
   inputTempo.setAttribute('class', 'inputCalc');
   inputTempo.setAttribute('id', 'inputTempo');
   inputTempo.setAttribute('value', '');
-  inputTempo.setAttribute('type', 'tel');
+  inputTempo.setAttribute('type', 'number');
   inputTempo.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
   const selectionPeriodo  = document.createElement('select');
@@ -56,7 +59,8 @@ const getCalcContainer = () => {
   periodo2.textContent = 'Mesesl';
   
   const labelTaxa = document.createElement('label');
-  labelTaxa.setAttribute('class', 'labelTaxa');
+  labelTaxa.setAttribute('class', 'labelCalc');
+  labelTaxa.setAttribute('id', 'labelTaxa');
   labelTaxa.setAttribute('for', 'inputTaxa');
   labelTaxa.textContent = 'Taxa:  ';
 
