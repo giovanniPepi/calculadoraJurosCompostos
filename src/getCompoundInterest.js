@@ -2,17 +2,13 @@ const getCompoundInterest = (p, t, r, taxaPeriodo, periodicidade) => {
     console.log('Período: ', p, ' Tempo: ', t, ' Taxa: ', r, ' Taxa em: ', taxaPeriodo, ' periodicidade: ', periodicidade);
 
     const convertToMonthlyTaxa = (r) => {
-        let percentage = r / 100;
-        let plusOne = percentage + 1;
-        let power =  Math.pow(plusOne, (1/12));
-        let subtract = power - 1;
-        let monthlyTaxa = subtract * 100;
+        let monthlyTaxa = ((Math.pow(((r/100) + 1), (1/12)))- 1) * 100;
         return r =  monthlyTaxa;
     };
 
     const convertToYearly = (t) => t = t * 12;
 
-    // compound int formula 
+    // compound int formula - default is on monthly interest and monthly periods
 
         //adjust taxa to monthly if needed 
         if (taxaPeriodo !== 'mensal') r = convertToMonthlyTaxa(r);
