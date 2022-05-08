@@ -5,17 +5,18 @@ const getCalcContainer = () => {
   const calcContainer = document.createElement('section');
   calcContainer.setAttribute('class', 'calcContainer');
 
-  const labelInicial = document.createElement('label');
-  labelInicial.setAttribute('class', 'labelCalc');
-  labelInicial.setAttribute('for', 'inputInicial');
-  labelInicial.textContent = 'Valor Inicial R$ ';
+  const labelPrincipal = document.createElement('label');
+  labelPrincipal.setAttribute('class', 'labelCalc');
+  labelPrincipal.setAttribute('for', 'inputPrincipal');
+  labelPrincipal.textContent = 'Valor Principal R$ ';
 
-  const inputInicial = document.createElement('input');
-  inputInicial.setAttribute('class', 'inputCalc');
-  inputInicial.setAttribute('id', 'inputInicial');
-  inputInicial.setAttribute('value', '0');
-  inputInicial.setAttribute('type', 'tel');
-  inputInicial.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
+  const inputPrincipal = document.createElement('input');
+  inputPrincipal.setAttribute('class', 'inputCalc');
+  inputPrincipal.setAttribute('id', 'inputPrincipal');
+  inputPrincipal.setAttribute('value', '');
+  inputPrincipal.setAttribute('type', 'tel');
+  //accept only numbers as input
+  inputPrincipal.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
   const labelValor = document.createElement('label');
   labelValor.setAttribute('class', 'labelCalc');
@@ -25,7 +26,7 @@ const getCalcContainer = () => {
   const inputValor = document.createElement('input');
   inputValor.setAttribute('class', 'inputCalc');
   inputValor.setAttribute('id', 'inputValor');
-  inputValor.setAttribute('value', '0');
+  inputValor.setAttribute('value', '');
   inputValor.setAttribute('type', 'tel');
   inputValor.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
   inputValor.required = true;
@@ -33,12 +34,12 @@ const getCalcContainer = () => {
   const labelTempo = document.createElement('label');
   labelTempo.setAttribute('class', 'labelCalc');
   labelTempo.setAttribute('for', 'inputTempo');
-  labelTempo.textContent = 'Tempo:  ';
+  labelTempo.textContent = 'Período  ';
 
   const inputTempo = document.createElement('input');
   inputTempo.setAttribute('class', 'inputCalc');
   inputTempo.setAttribute('id', 'inputTempo');
-  inputTempo.setAttribute('value', '0');
+  inputTempo.setAttribute('value', '');
   inputTempo.setAttribute('type', 'tel');
   inputTempo.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
@@ -62,7 +63,7 @@ const getCalcContainer = () => {
   const inputTaxa = document.createElement('input');
   inputTaxa.setAttribute('class', 'inputCalc');
   inputTaxa.setAttribute('id', 'inputTaxa');
-  inputTaxa.setAttribute('value', '0');
+  inputTaxa.setAttribute('value', '');
   inputTaxa.setAttribute('type', 'tel');
   inputTaxa.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
@@ -78,8 +79,8 @@ const getCalcContainer = () => {
   selectionTempo.appendChild(periodoTaxa1);
   selectionTempo.appendChild(periodoTaxa2);
 
-  calcContainer.appendChild(labelInicial);
-  calcContainer.appendChild(inputInicial);
+  calcContainer.appendChild(labelPrincipal);
+  calcContainer.appendChild(inputPrincipal);
 
   calcContainer.appendChild(labelValor);
   calcContainer.appendChild(inputValor);

@@ -1,7 +1,9 @@
-const getCompoundInterest = (inicial, valor, tempo, taxa, periodo) => {
+const getCompoundInterest = (p, t, r, periodo) => {
 
-    console.log(inicial, valor, tempo, taxa, periodo);
-
+    // compound int formula 
+    const result = p * (Math.pow((1 + r / 100), t));
+    console.log(result);    
+    return result;
 }
 
 export default getCompoundInterest;
