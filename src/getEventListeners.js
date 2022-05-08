@@ -12,7 +12,7 @@ const getEventListeners = () => {
 
     //calls the calc function with the right paramaters
     const calcBtn = document.querySelector('.calcBtn');
-    calcBtn.addEventListener('click', () => getCompoundInterest(inputPrincipal.value, inputTime.value, inputTaxa.value, selectionTempo.value, selectionPeriod.value));
+    calcBtn.addEventListener('click', () => getCompoundInterest(inputPrincipal.value, inputTime.value, inputTaxa.value, selectionPeriod.value, selectionTempo.value));
 }
 
 export default getEventListeners;
