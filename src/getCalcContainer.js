@@ -16,6 +16,7 @@ const getCalcContainer = () => {
   inputPrincipal.setAttribute('id', 'inputPrincipal');
   inputPrincipal.setAttribute('value', '');
   inputPrincipal.setAttribute('type', 'tel');
+  inputPrincipal.setAttribute('placeholder', 'R$0,00');
   //accept only numbers as input
   inputPrincipal.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
@@ -30,6 +31,7 @@ const getCalcContainer = () => {
   inputValor.setAttribute('id', 'inputValor');
   inputValor.setAttribute('value', '');
   inputValor.setAttribute('type', 'tel');
+  inputValor.setAttribute('placeholder', 'R$0,00');
   inputValor.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
   inputValor.required = true;
 
@@ -44,6 +46,7 @@ const getCalcContainer = () => {
   inputTempo.setAttribute('id', 'inputTempo');
   inputTempo.setAttribute('value', '');
   inputTempo.setAttribute('type', 'number');
+  inputTempo.setAttribute('placeholder', '0');
   inputTempo.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
   const selectionPeriodo  = document.createElement('select');
@@ -69,6 +72,7 @@ const getCalcContainer = () => {
   inputTaxa.setAttribute('id', 'inputTaxa');
   inputTaxa.setAttribute('value', '');
   inputTaxa.setAttribute('type', 'tel');
+  inputTaxa.setAttribute('placeholder', '0');
   inputTaxa.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
   const selectionTempo  = document.createElement('select');
