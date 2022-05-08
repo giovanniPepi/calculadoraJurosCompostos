@@ -59,7 +59,7 @@ const getCalcContainer = () => {
 
   const periodo2 = document.createElement('option');
   periodo2.setAttribute('value', 'meses');
-  periodo2.textContent = 'Mesesl';
+  periodo2.textContent = 'Meses';
   
   const labelTaxa = document.createElement('label');
   labelTaxa.setAttribute('class', 'labelCalc');
