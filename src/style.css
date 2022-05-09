@@ -18,6 +18,8 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .resultContainer {
+  display: flex;
+  flex-direction: column;
 }
 .calcBtn, .resetBtn {
   background: var(--zinc400);

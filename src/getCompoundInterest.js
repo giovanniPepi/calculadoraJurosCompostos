@@ -1,5 +1,3 @@
-import getResultTable from "./getResultTable";
-
 const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo, aporte) => {
     console.log('Inicial: ', p, ' Tempo: ', t, ' Taxa: ', r, ' periodicidade: ', periodicidade, ' Taxa em: ', taxaPeriodo, ' aporte: ', aporte);
 
