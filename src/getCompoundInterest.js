@@ -1,7 +1,7 @@
 import getResultTable from "./getResultTable";
 
-const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
-    console.log('Período: ', p, ' Tempo: ', t, ' Taxa: ', r, ' periodicidade: ', periodicidade, ' Taxa em: ', taxaPeriodo, );
+const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo, aporte) => {
+    console.log('Inicial: ', p, ' Tempo: ', t, ' Taxa: ', r, ' periodicidade: ', periodicidade, ' Taxa em: ', taxaPeriodo, ' aporte: ', aporte);
 
     //conversion formulas
     const convertToYearlyTaxa = (r) => {
@@ -25,14 +25,13 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
       //Obj to store each individual result
       let resultObj = {};
       // rounds to 2 decimals using 100
-      let result = Math.round((p * (Math.pow((1 + r / 100), i)))*100)/100;
+      let result = Math.round(((p + aporte) * (Math.pow((1 + r / 100), i)))*100)/100;
       let juros = Math.round((result - p)*100)/100;
       resultObj[`${periodicidade}`] = i;
-      resultObj['Total'] = result;
-      resultObj['Juros'] = juros;
+      resultObj['Total R$'] = result;
+      resultObj['Juros R$'] = juros;
       result1.push(resultObj);
     }
-
     return result1;
 }
 

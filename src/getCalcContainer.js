@@ -9,7 +9,7 @@ const getCalcContainer = () => {
   labelPrincipal.setAttribute('class', 'labelCalc');
   labelPrincipal.setAttribute('id', 'labelPrincipal');
   labelPrincipal.setAttribute('for', 'inputPrincipal');
-  labelPrincipal.textContent = 'Valor Principal R$ ';
+  labelPrincipal.textContent = 'Valor Inicial R$ ';
 
   const inputPrincipal = document.createElement('input');
   inputPrincipal.setAttribute('class', 'inputCalc');
