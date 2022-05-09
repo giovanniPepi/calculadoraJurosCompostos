@@ -2,9 +2,10 @@ import cleanResultTable from "./cleanResultTable";
 
 const getResultTable = (resultArray) => {
   cleanResultTable();
-    
+
   // table creation
   const table = document.createElement('table');
+  table.setAttribute('class', 'resultTable');
   
   //return object property names, iterate only through first obj
   let data = Object.keys(resultArray[0]);

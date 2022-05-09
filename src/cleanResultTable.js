@@ -5,10 +5,6 @@ const cleanResultTable = () => {
   //nuke resultContainer and reconstruct it
   const resultContainer  = document.querySelector('.resultContainer');
   body.removeChild(resultContainer);
-  getResultContainer();
-
-
-  
-  
+  getResultContainer();  
 }
 export default cleanResultTable;

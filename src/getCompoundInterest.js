@@ -31,8 +31,7 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
       result1.push(resultObj);
     }
     console.log(result1);   
-    getResultTable(result1);
-
+    return result1;
 }
 
 export default getCompoundInterest;
