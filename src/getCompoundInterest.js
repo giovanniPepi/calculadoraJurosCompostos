@@ -3,14 +3,21 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo, aporte) => {
 
     //conversion formulas
     const convertToYearlyTaxa = (r) => {
-        console.log('fucking r is ', r)
         let yearlyTaxa = (Math.pow((1 + r/100), 12) - 1)*100;
         return r =  yearlyTaxa;
     };
 
+    const convertToMonthlyTaxa = (r) => {
+      let monthlyTaxa = (Math.pow((1+r/100), 1/12)-1)*100;
+      return r = monthlyTaxa;
+    }
+
     //checklist to convert
-    /* taxaPeriodo === 'mensal'? console.log(null):r = convertToMonthlyTaxa(r); */
     if (taxaPeriodo === 'mensal') r = convertToYearlyTaxa(r); 
+    if (periodicidade === 'Mes' && taxaPeriodo === 'anual') {
+      r = convertToMonthlyTaxa(r);
+      console.log(t, ' ', r);
+    } 
 
     console.log(r, 'is the taxa', t, ' is the n ');
     

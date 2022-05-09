@@ -101,6 +101,7 @@ const getResultChart = (result1) => {
   let xData = dataItems;
   console.log(xData);
 
+  //generate index to labels
   let indexArray = []; 
   xData.forEach((item, i) => {
     indexArray.push(i);
