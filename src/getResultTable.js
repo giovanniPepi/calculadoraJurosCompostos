@@ -1,5 +1,8 @@
+import cleanResultTable from "./cleanResultTable";
+
 const getResultTable = (resultArray) => {
-  
+  cleanResultTable();
+    
   // table creation
   const table = document.createElement('table');
   
