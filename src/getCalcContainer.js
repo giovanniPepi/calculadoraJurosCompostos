@@ -20,20 +20,20 @@ const getCalcContainer = () => {
   //accept only numbers as input
   inputPrincipal.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
 
-  const labelValor = document.createElement('label');
-  labelValor.setAttribute('class', 'labelCalc');
-  labelValor.setAttribute('id', 'labelValor');
-  labelValor.setAttribute('for', 'inputValor');
-  labelValor.textContent = 'Aporte R$ ';
+  const labelAporte = document.createElement('label');
+  labelAporte.setAttribute('class', 'labelCalc');
+  labelAporte.setAttribute('id', 'labelAporte');
+  labelAporte.setAttribute('for', 'inputAporte');
+  labelAporte.textContent = 'Aporte R$ ';
 
-  const inputValor = document.createElement('input');
-  inputValor.setAttribute('class', 'inputCalc');
-  inputValor.setAttribute('id', 'inputValor');
-  inputValor.setAttribute('value', '');
-  inputValor.setAttribute('type', 'tel');
-  inputValor.setAttribute('placeholder', 'R$0,00');
-  inputValor.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
-  inputValor.required = true;
+  const inputAporte = document.createElement('input');
+  inputAporte.setAttribute('class', 'inputCalc');
+  inputAporte.setAttribute('id', 'inputAporte');
+  inputAporte.setAttribute('value', '');
+  inputAporte.setAttribute('type', 'tel');
+  inputAporte.setAttribute('placeholder', 'R$0,00');
+  inputAporte.setAttribute('onkeypress', "return event.charCode>=48 && event.charCode<=57");
+  inputAporte.required = true;
 
   const labelTempo = document.createElement('label');
   labelTempo.setAttribute('class', 'labelCalc');
@@ -105,8 +105,8 @@ const getCalcContainer = () => {
   calcContainer.appendChild(labelPrincipal);
   calcContainer.appendChild(inputPrincipal);
 
-  calcContainer.appendChild(labelValor);
-  calcContainer.appendChild(inputValor);
+  calcContainer.appendChild(labelAporte);
+  calcContainer.appendChild(inputAporte);
 
   calcContainer.appendChild(labelTempo);
   calcContainer.appendChild(inputTempo);
