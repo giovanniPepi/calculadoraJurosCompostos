@@ -23,8 +23,8 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
     for (let i = 0; i <= t; i++) {
       //Obj to store each individual result
       let resultObj = {};
-      let result = (p * (Math.pow((1 + r / 100), i)));
-      let juros = result - p;
+      let result = Math.round((p * (Math.pow((1 + r / 100), i)))*100)/100;
+      let juros = Math.round((result - p)*100)/100;
       resultObj['ano'] = i;
       resultObj['valor'] = result;
       resultObj['juros'] = juros;

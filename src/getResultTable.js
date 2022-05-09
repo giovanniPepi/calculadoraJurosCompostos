@@ -1,16 +1,5 @@
 const getResultTable = (resultArray) => {
   
-  //example
-/*   let result1 = [
-    {ano: 1, valor: 1000, juros: 12123},
-    {ano: 2, valor: 2000},
-    {ano: 3, valor: 3000},
-    {ano: 4, valor: 4000},
-    {ano: 5, valor: 5000},
-    {ano: 6, valor: 6000},
-    {ano: 7, valor: 18378},
-  ]; */
-
   // table creation
   const table = document.createElement('table');
   
@@ -18,7 +7,6 @@ const getResultTable = (resultArray) => {
   let data = Object.keys(resultArray[0]);
    
   //table populating  
-  //header
   const generateTableHead = (table, data) => {
     let thead = table.createTHead();
     let row = thead.insertRow();
