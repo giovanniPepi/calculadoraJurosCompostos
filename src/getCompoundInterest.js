@@ -1,7 +1,6 @@
 const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo, aporte) => {
-    console.log('Inicial: ', p, ' Tempo: ', t, ' Taxa: ', r, ' periodicidade: ', periodicidade, ' Taxa em: ', taxaPeriodo, ' aporte: ', aporte);
 
-    //conversion formulas
+  //conversion formulas
     const convertToYearlyTaxa = (r) => {
         let yearlyTaxa = (Math.pow((1 + r/100), 12) - 1)*100;
         return r =  yearlyTaxa;
@@ -16,7 +15,6 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo, aporte) => {
     if (taxaPeriodo === 'mensal') r = convertToYearlyTaxa(r); 
     if (periodicidade === 'Mes' && taxaPeriodo === 'anual') {
       r = convertToMonthlyTaxa(r);
-      console.log(t, ' ', r);
     } 
 
     console.log(r, 'is the taxa', t, ' is the n ');

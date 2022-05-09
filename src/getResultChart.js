@@ -68,18 +68,24 @@ const getResultChart = (result1) => {
 
       let keys = Object.keys(obj);
       
-      let ano = "Ano";
       let total = "Total R$";
       let juros = "Juros R$";
 
       //store data from each year as an array
       let dataItem = []
-      
-      dataItem.push(obj[ano]);
+
+      //adjust for mes/ano
+      if (keys[0] === 'Ano'){
+        let ano = "Ano";
+        dataItem.push(obj[ano]);
+      } else if (keys[0] === 'Mes') {
+        let mes = "Mes";
+        dataItem.push(obj[mes]);  
+      }     
+
       dataItem.push(obj[total]);
       dataItem.push(obj[juros]);
       dataItems.push(dataItem);
-
     }
   })();
 
@@ -97,15 +103,12 @@ const getResultChart = (result1) => {
   chartDiv.appendChild(resultChart);
   resultContainer.appendChild(chartDiv);
 
-  //spaghetti to acess the data...
-  let xData = dataItems;
-  console.log(xData);
-
   //generate index to labels
   let indexArray = []; 
-  xData.forEach((item, i) => {
+  dataItems.forEach((item, i) => {
     indexArray.push(i);
   });
+
 
   //chart generation
   const ctx = resultChart;
@@ -115,7 +118,7 @@ const getResultChart = (result1) => {
         labels: indexArray,
         datasets: [{
             label: 'money',
-            data: xData,
+            data: dataItems,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
