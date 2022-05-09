@@ -44,14 +44,6 @@ const getResultTable = (resultArray) => {
   //appends
   const resultContainer = document.querySelector('.resultContainer');
   resultContainer.appendChild(table);
-
-  getResultChart();
-
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
-
 }
 
 export default getResultTable;

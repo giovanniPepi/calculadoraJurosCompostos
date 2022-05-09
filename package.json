@@ -36,6 +36,7 @@
   "dependencies": {
     "@mdi/font": "^6.6.96",
     "@mdi/js": "^6.6.96",
+    "chart.js": "^3.7.1",
     "svg-inline-loader": "^0.8.2",
     "svg-loader": "^0.0.2"
   }

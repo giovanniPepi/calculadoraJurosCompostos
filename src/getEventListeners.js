@@ -1,5 +1,4 @@
-import getCompoundInterest from "./getCompoundInterest";
-import getResultTable from "./getResultTable";
+import getResults from "./getResults";
 
 const getEventListeners = () => {
 
@@ -13,8 +12,7 @@ const getEventListeners = () => {
 
     //calls the result and calculator function;
     const calcBtn = document.querySelector('.calcBtn');
-    calcBtn.addEventListener('click', () => 
-    getResultTable(getCompoundInterest(inputPrincipal.value, inputTime.value, inputTaxa.value, selectionPeriod.value, selectionTempo.value, inputAporte.value)));
-}
+    calcBtn.addEventListener('click', () => getResults(inputPrincipal.value, inputTime.value, inputTaxa.value, selectionPeriod.value, selectionTempo.value, inputAporte.value));
+  }
 
 export default getEventListeners;
