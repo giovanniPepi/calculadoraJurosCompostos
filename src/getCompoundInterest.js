@@ -1,3 +1,5 @@
+import getResultTable from "./getResultTable";
+
 const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
     console.log('Período: ', p, ' Tempo: ', t, ' Taxa: ', r, ' periodicidade: ', periodicidade, ' Taxa em: ', taxaPeriodo, );
 
@@ -12,22 +14,24 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
     taxaPeriodo === 'mensal'? console.log(null):r = convertToMonthlyTaxa(r);
     periodicidade === 'meses'? console.log(null) : t = convertToMonths(t);
  
-    
     console.log(r, 'is the taxa', t, ' is the n ');
     
     //main calc
-/*     const result = (p * (Math.pow((1 + r / 100), t)));
-    const juros = result - p;
-    console.log('Total: ', result, ' Juros: ', juros);    
- */
-    //looping through each period
+    //array to store results
+    let result1 = [];
+
     for (let i = 0; i <= t; i++) {
+      //Obj to store each individual result
+      let resultObj = {};
       let result = (p * (Math.pow((1 + r / 100), i)));
       let juros = result - p;
-      console.log(i, 'periodo ', 'Total: ', result, ' Juros: ', juros);    
-
+      resultObj['ano'] = i;
+      resultObj['valor'] = result;
+      resultObj['juros'] = juros;
+      result1.push(resultObj);
     }
-    
+    console.log(result1);   
+    getResultTable(result1);
 
 }
 

@@ -16,9 +16,6 @@ const getResultContainer = () => {
   resultContainer.appendChild(headerResult);
 
   body.appendChild(resultContainer);
-
-  getResultTable(); 
-
 }
 
 export default getResultContainer;
