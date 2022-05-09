@@ -63,23 +63,27 @@ const getResultChart = (result1) => {
   let dataItems = [];
 
   //acess key values for each obj inside array
-  const dataTest = (() => {
+  const getData = (() => {
     for(let obj of result1) {
+
       let keys = Object.keys(obj);
+      
       let ano = "Ano";
       let total = "Total R$";
       let juros = "Juros R$";
+
       //store data from each year as an array
       let dataItem = []
+      
       dataItem.push(obj[ano]);
       dataItem.push(obj[total]);
       dataItem.push(obj[juros]);
       dataItems.push(dataItem);
+
     }
   })();
 
-  console.log(dataItems);
-
+  //DOM manip
   const chartDiv = document.createElement('div')
   chartDiv.setAttribute('class', 'chartDiv');
 
@@ -93,15 +97,24 @@ const getResultChart = (result1) => {
   chartDiv.appendChild(resultChart);
   resultContainer.appendChild(chartDiv);
 
+  //spaghetti to acess the data...
+  let xData = dataItems;
+  console.log(xData);
+
+  let indexArray = []; 
+  xData.forEach((item, i) => {
+    indexArray.push(i);
+  });
+
   //chart generation
   const ctx = resultChart;
   const myChart = new Chart(ctx,{
     type: 'line',
     data: {
-        labels: resultData,
+        labels: indexArray,
         datasets: [{
-            label: 'teste',
-            data: dataItems,
+            label: 'money',
+            data: xData,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
