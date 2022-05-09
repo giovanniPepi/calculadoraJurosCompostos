@@ -1,7 +1,73 @@
 body * {
   border: .1px solid red;
 }
-
+:root {
+--smallPadding: .5rem;
+--zinc400: #A1A1AA;
+--fontSizeBigger: 1.2rem;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .calcContainer {
   display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.resultContainer {
+}
+.calcBtn, .resetBtn {
+  background: var(--zinc400);
+  font-size: var(--fontSizeBigger);
+}
+#labelCalc {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#inputPrincipal{
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+#labelValor {
+  grid-column: 1/2;
+  grid-row:  2/3;
+}
+#inputValor {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+#labelTempo {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#inputTempo {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.selectionPeriodo {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+#labelTaxa {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+#inputTaxa {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.selectionTempo {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+.calcBtn {
+  grid-column: 1/4;
+  grid-row: 5/6;
+}
+.resetBtn {
+  grid-column: 1/4;
+  grid-row: 6/7;
 }

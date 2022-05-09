@@ -1,11 +1,11 @@
 import getCalcContainer from "./getCalcContainer";
-import getContainer from "./getContainer";
+import getEventListeners from "./getEventListeners";
 import getResultContainer from "./getResultContainer";
 
 const domLoader = (() => {
-  getContainer();
   getCalcContainer();
   getResultContainer();
+  getEventListeners();
 })();
 
-export default domLoader;
+export default domLoader; 
