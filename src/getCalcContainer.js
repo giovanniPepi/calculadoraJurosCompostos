@@ -54,11 +54,11 @@ const getCalcContainer = () => {
   selectionPeriodo.setAttribute('name', 'periodo');
 
   const periodo1 = document.createElement('option');
-  periodo1.setAttribute('value', 'anos');
+  periodo1.setAttribute('value', 'Ano');
   periodo1.textContent = 'Anos';
 
   const periodo2 = document.createElement('option');
-  periodo2.setAttribute('value', 'meses');
+  periodo2.setAttribute('value', 'Mes');
   periodo2.textContent = 'Meses';
   
   const labelTaxa = document.createElement('label');

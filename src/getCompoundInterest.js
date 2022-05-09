@@ -11,9 +11,9 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
     const convertToMonths = (t) => t = t*12;
 
     //checklist to convert
-    taxaPeriodo === 'mensal'? console.log(null):r = convertToMonthlyTaxa(r);
-    periodicidade === 'meses'? console.log(null) : t = convertToMonths(t);
- 
+    /* taxaPeriodo === 'mensal'? console.log(null):r = convertToMonthlyTaxa(r); */
+    if (taxaPeriodo !== 'mensal') r = convertToMonthlyTaxa(r);
+
     console.log(r, 'is the taxa', t, ' is the n ');
     
     //main calc
@@ -23,11 +23,12 @@ const getCompoundInterest = (p, t, r, periodicidade, taxaPeriodo) => {
     for (let i = 0; i <= t; i++) {
       //Obj to store each individual result
       let resultObj = {};
+      // rounds to 2 decimals using 100
       let result = Math.round((p * (Math.pow((1 + r / 100), i)))*100)/100;
       let juros = Math.round((result - p)*100)/100;
-      resultObj['ano'] = i;
-      resultObj['valor'] = result;
-      resultObj['juros'] = juros;
+      resultObj[`${periodicidade}`] = i;
+      resultObj['Total'] = result;
+      resultObj['Juros'] = juros;
       result1.push(resultObj);
     }
     console.log(result1);   
